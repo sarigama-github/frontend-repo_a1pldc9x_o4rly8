@@ -14,7 +14,7 @@ function InstagramReel({ id }) {
         frameBorder="0"
         loading="lazy"
         referrerPolicy="no-referrer"
-        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
+        sandbox="allow-scripts allow-same-origin allow-presentation"
       />
     </div>
   )
