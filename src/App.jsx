@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 
-// Instagram embed helper
+// Instagram embed helper (plays inline, no redirects)
 function InstagramReel({ id }) {
   return (
     <div className="relative w-full aspect-[9/16] rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
@@ -14,6 +14,7 @@ function InstagramReel({ id }) {
         frameBorder="0"
         loading="lazy"
         referrerPolicy="no-referrer"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-presentation"
       />
     </div>
   )
@@ -103,9 +104,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-black to-neutral-700 dark:from-white/20 dark:to-white/5 ring-1 ring-black/10 dark:ring-white/10 grid place-items-center shadow-lg shadow-black/30">
-              <span className="text-[10px] font-black tracking-widest">FIT</span>
+              <span className="text-[10px] font-black tracking-widest">FG</span>
             </div>
-            <span className="font-semibold tracking-wide">Shred Studio</span>
+            <span className="font-semibold tracking-wide">fatgo mantra</span>
           </div>
           <div className="flex items-center gap-3">
             <a href="#plans" className="px-3 py-2 text-sm rounded-md hover:bg-black/5 dark:hover:bg-white/5">Plans</a>
@@ -132,11 +133,11 @@ export default function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
-              Reduce fat. Build habits. Feel amazing.
+              fatgo mantra
               <span className="block text-transparent bg-clip-text bg-[conic-gradient(from_180deg_at_50%_50%,#fff_0deg,#a78bfa_90deg,#22d3ee_180deg,#fb7185_270deg,#fff_360deg)] dark:drop-shadow-[0_1px_12px_rgba(255,255,255,0.25)] mt-2">The modern way to get lean.</span>
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="mt-5 text-base sm:text-lg text-gray-600 dark:text-gray-300">
-              Animated, modern, and truly responsive. Choose a plan and start today — daily workouts, personalized nutrition, and weekly one‑on‑one coaching.
+              Reduce fat. Build habits. Feel amazing. Choose a plan and start today — daily workouts, personalized nutrition, and weekly one‑on‑one coaching.
             </motion.p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#plans" className="btn-primary">See Plans</a>
@@ -327,7 +328,7 @@ export default function App() {
       {/* Footer */}
       <footer className="relative py-10 border-t border-black/5 dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} Shred Studio — All rights reserved.</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} fatgo mantra — All rights reserved.</p>
           <div className="flex items-center gap-3 text-sm">
             <a href="#plans" className="hover:underline">Plans</a>
             <a href="#reviews" className="hover:underline">Reviews</a>
